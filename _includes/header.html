@@ -5,12 +5,10 @@
         <span class="site-description">{{site.user_title}}</span>
       </h1>
       <div class="header-icons">
-        {%- if site.email -%}
-        <a aria-label="Send email" href="mailto:{{ site.email | escape }}"><i class="icon fa fa-envelope"></i></a>
-        {%- endif -%}
-        {%- if site.github_username -%}
-        <a aria-label="My Github" target="_blank" href="https://github.com/{{ site.github_username | cgi_escape | escape }}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-        {%- endif -%}
+        {%- if site.twitter_username -%}<a aria-label="My Twitter" target="_blank" href={{ site.twitter_username | escape }}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>{%- endif -%}
+        {%- if site.gplus_username -%}<a aria-label="My Google Plus" target="_blank" href="{{ site.gplus_username | escape }}"><i class="icon fa fa-google-plus" aria-hidden="true"></i></a>{%- endif -%}
+        {%- if site.email -%}<a aria-label="Send email" href="mailto:{{ site.email | escape }}"><i class="icon fa fa-envelope"></i></a>{%- endif -%}
+        {%- if site.github_username -%}<a aria-label="My Github" target="_blank" href="https://github.com/{{ site.github_username | cgi_escape | escape }}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>{%- endif -%}
       </div>
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
